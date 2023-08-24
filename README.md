@@ -24,7 +24,7 @@ $ gem install Miniparser
 
 ## Usage
 
-Miniparse provides two main methods to process either a file or a string containing HTML, JavaScript, or CSS code.
+Miniparser provides two main methods to process either a file or a string containing HTML, JavaScript, or CSS code.
 
 ### Processing a File
 
