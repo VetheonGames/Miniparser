@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'A Gem for Validating and Minifying HTML, CSS, and JS smartly'
   spec.description = 'Miniparse works pretty simply. You pass the Gem some input (HTML, JS, or CSS), and it will
-                      validate it, return the validated status, then minify it, and return the minified version as both
-                      a file (path) and a text return accessible through a variable'
+                      validate it, return the validated status, then minify it, and return the minified version as either
+                      a file (path) and a text return, respective to what input it got'
   spec.homepage = 'https://git.pixelridgesoftworks.com/PixelRidge-Softworks/Miniparse'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.2.2'

@@ -1,39 +1,61 @@
 # Miniparse
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Miniparse`. To experiment with that code, run `bin/console` for an interactive prompt.
+Miniparse is a Ruby gem that takes code as input (HTML, JavaScript, or CSS), determines the code language, validates it, and then minifies it. It returns whether the code is valid or not, and if valid, provides the minified code.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Add this line to your application's Gemfile:
 
-Install the gem and add to the application's Gemfile by executing:
+```ruby
+gem 'Miniparse'
+```
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+And then execute:
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+```bash
+$ bundle install
+```
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+Or install it yourself as:
+
+```bash
+$ gem install Miniparse
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Miniparse provides two main methods to process either a file or a string containing HTML, JavaScript, or CSS code.
 
-## Development
+### Processing a File
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+You can process a file by calling the `type_file` method and passing the file path as an argument:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```ruby
+result = Miniparse::Processor.type_file('path/to/yourfile.html')
+```
+
+### Processing a String
+
+You can process a string containing code by calling the `type_string` method:
+
+```ruby
+result = Miniparse::Processor.type_string('<html><head></head><body></body></html>')
+```
+
+Both methods return a hash containing the validation status, any errors, and the minified code if the input was valid:
+
+```ruby
+{
+  valid: true or false,
+  errors: "Error message if any",
+  minified_code: "Minified code if valid"
+}
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/Miniparse. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/Miniparse/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome. Please adhere to the code of conduct.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Miniparse project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/Miniparse/blob/master/CODE_OF_CONDUCT.md).
