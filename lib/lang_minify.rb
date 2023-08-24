@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Miniparse
+module Miniparser
   class Minifier
     def initialize(language)
       @language = language

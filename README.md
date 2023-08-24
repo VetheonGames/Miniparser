@@ -1,13 +1,13 @@
-# Miniparse
+# Miniparser
 
-Miniparse is a Ruby gem that takes code as input (HTML, JavaScript, or CSS), determines the code language, validates it, and then minifies it. It returns whether the code is valid or not, and if valid, provides the minified code.
+Miniparser is a Ruby gem that takes code as input (HTML, JavaScript, or CSS), determines the code language, validates it, and then minifies it. It returns whether the code is valid or not, and if valid, provides the minified code.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'Miniparse'
+gem 'Miniparser'
 ```
 
 And then execute:
@@ -19,7 +19,7 @@ $ bundle install
 Or install it yourself as:
 
 ```bash
-$ gem install Miniparse
+$ gem install Miniparser
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ Miniparse provides two main methods to process either a file or a string contain
 You can process a file by calling the `type_file` method and passing the file path as an argument:
 
 ```ruby
-result = Miniparse::Processor.type_file('path/to/yourfile.html')
+result = Miniparser::Processor.type_file('path/to/yourfile.html')
 ```
 
 ### Processing a String
@@ -39,7 +39,7 @@ result = Miniparse::Processor.type_file('path/to/yourfile.html')
 You can process a string containing code by calling the `type_string` method:
 
 ```ruby
-result = Miniparse::Processor.type_string('<html><head></head><body></body></html>')
+result = Miniparser::Processor.type_string('<html><head></head><body></body></html>')
 ```
 
 Both methods return a hash containing the validation status, any errors, and the minified code if the input was valid:

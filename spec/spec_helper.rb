@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "Miniparse"
+require "Miniparser"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

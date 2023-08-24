@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe Miniparse do
+RSpec.describe Miniparser do
   it "has a version number" do
-    expect(Miniparse::VERSION).not_to be nil
+    expect(Miniparser::VERSION).not_to be nil
   end
 
   it "does something useful" do

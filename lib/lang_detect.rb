@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Miniparse
+module Miniparser
   class LanguageDetector
     def detect(code)
       return :html if code.match?(/<\s*html.*>|<\s*head.*>|<\s*body.*>/i)

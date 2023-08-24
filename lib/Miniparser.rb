@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require_relative 'Miniparse/version'
+require_relative 'Miniparser/version'
 require_relative 'lang_detect'
 require_relative 'lang_minify'
 require_relative 'lang_validate'
 
-module Miniparse
+module Miniparser
   class Error < StandardError; end
 
   class Processor

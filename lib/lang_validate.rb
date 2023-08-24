@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'English'
-module Miniparse
+module Miniparser
   class Validator
     def initialize(language)
       @language = language
