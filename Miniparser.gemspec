@@ -5,7 +5,7 @@ require_relative 'lib/Miniparser/version'
 Gem::Specification.new do |spec|
   spec.name = 'Miniparser'
   spec.version = Miniparser::VERSION
-  spec.authors = ['VetheonGames']
+  spec.authors = ['PixelRidge Softworks']
   spec.email = ['ceo@pixelatedstudios.net']
 
   spec.summary = 'A Gem for Validating and Minifying HTML, CSS, and JS smartly'
