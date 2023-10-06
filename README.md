@@ -2,6 +2,8 @@
 
 Miniparser is a Ruby gem that takes code as input (HTML, JavaScript, or CSS), determines the code language, validates it, and then minifies it. It returns whether the code is valid or not, and if valid, provides the minified code.
 
+Need more direct help? Join our [Discord](https://discord.gg/SQeWBWS8v4)
+
 ## Installation
 
 Add this line to your application's Gemfile:
